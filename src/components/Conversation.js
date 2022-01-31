@@ -4,7 +4,7 @@ import { FaLocationArrow } from 'react-icons/fa';
 
 const Wrapper = styled.section`
   display: flex;
-  max-width: 400px;
+  width: 500px;
   min-width: 350px;
   height: 90vh;
   margin-top: 2rem;

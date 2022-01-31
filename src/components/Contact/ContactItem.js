@@ -38,7 +38,7 @@ const ItemDetail = styled.p`
 `;
 
 const ItemInfo = styled.small`
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   margin: 0.3rem 0rem;
   display: block;
 `;
