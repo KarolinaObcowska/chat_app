@@ -7,7 +7,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 
 const Wrapper = styled.aside`
   height: 100vh;
-  width: 4rem;
+  min-width: 4rem;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.3);

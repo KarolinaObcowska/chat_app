@@ -6,7 +6,7 @@ const Wrapper = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  min-width: 300px;
 `;
 
 const Title = styled.h2`
