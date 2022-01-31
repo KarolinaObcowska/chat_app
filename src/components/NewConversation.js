@@ -4,11 +4,10 @@ import { FaLocationArrow } from 'react-icons/fa';
 
 const Wrapper = styled.section`
   display: flex;
-  width: 50%;
+  max-width: 400px;
   min-width: 350px;
   height: 90vh;
-  margin-top: 3rem;
-  margin-left: 3rem;
+  margin-top: 2rem;
   padding: 1rem;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.2);
@@ -19,7 +18,9 @@ const Wrapper = styled.section`
 `;
 const Messages = styled.div`
   height: 100%;
-  overflow: scrollY;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
 `;
@@ -31,17 +32,21 @@ const MessageLeft = styled.div`
   margin: 1rem 0rem;
   padding: 0.5rem 1rem;
   color: white;
+  max-width: 300px;
   font-weight: 1;
   font-size: 0.7rem;
+  overflow-wrap: normal;
   border-radius: 10px;
 `;
 const MessageRight = styled.div`
   background-color: #6b2684;
   width: fit-content;
+  max-width: 300px;
   align-self: flex-end;
   padding: 0.5rem 1rem;
   color: white;
   font-weight: 1;
+  overflow-wrap: normal;
   font-size: 0.7rem;
   border-radius: 10px;
 `;
@@ -80,6 +85,25 @@ const NewConversation = () => {
   return (
     <Wrapper>
       <Messages>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>
+          asdasd asdkajbck jsbdcjkbsdk jvbkjsbvkjbfkjv bfsjkbvjskfbvkjs fbkvjsfjkvbskjfbvj
+          ksbkjsbfkjvb ksjfvjfsbjkvbsf kjbvbfvasd asda sdas as dasdasd{' '}
+        </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
         <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
         <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
       </Messages>
