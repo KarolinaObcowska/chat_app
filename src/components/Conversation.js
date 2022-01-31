@@ -81,7 +81,7 @@ const Button = styled.button`
   border: none;
   background: none;
 `;
-const NewConversation = () => {
+const Conversation = () => {
   return (
     <Wrapper>
       <Messages>
@@ -119,4 +119,4 @@ const NewConversation = () => {
   );
 };
 
-export default NewConversation;
+export default Conversation;

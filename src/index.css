@@ -20,4 +20,5 @@ body {
 
 .App {
   display: flex;
+  gap: 5rem;
 }
