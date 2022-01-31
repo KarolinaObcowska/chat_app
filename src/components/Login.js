@@ -3,9 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  height: 100%;
-  z-index: 100;
-  margin-top: 10rem;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -17,43 +15,53 @@ const Form = styled.form`
   flex-direction: column;
   color: white;
   width: 300px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10%;
-  padding: 2rem;
+  padding: 3rem 2rem;
   justify-content: space-between;
+`;
+const FormGroup = styled.div`
+  position: relative;
 `;
 const Input = styled.input`
   margin: 1rem 0rem;
-  padding: 1rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
   color: #ffffffb0;
+  &:focus {
+    outline: none;
+  }
 `;
 const Label = styled.label`
   opacity: 0.6;
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  ${Input}:focus ~ & {
+    top: 10px;
+    font-size: 12px;
+    opacity: 1;
+  }
 `;
 const Title = styled.h2`
   text-align: center;
   font-size: 2rem;
-  opacity: 0.6;
 `;
 const Button = styled.button`
-  color: #ffffffb0;
+  color: white;
+  margin-top: 2rem;
   padding: 1rem 0rem;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: none;
+  border: 1px solid white;
   border-radius: 10px;
 `;
 
@@ -62,7 +70,10 @@ const Login = () => {
     <Wrapper>
       <Form>
         <Title>Join us!</Title>
-        <Input placeholder="E-MAIL" />
+        <FormGroup>
+          <Input type="email" name="email" />
+          <Label for="email">E-MAIL</Label>
+        </FormGroup>
         <Button>Sign up</Button>
       </Form>
     </Wrapper>
