@@ -3,23 +3,18 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  margin: 2rem 0rem;
   min-width: 300px;
-`;
-
-const Title = styled.h2`
-  color: white;
-  margin-top: 2rem;
-  font-weight: 1;
-  font-size: 1.2rem;
+  max-width: 400px;
+  height: 90vh;
 `;
 
 const List = styled.ul`
-  margin-top: 1rem;
   list-style: none;
   width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
 `;
 
 const ListItem = styled.li`
@@ -53,8 +48,19 @@ const LastMessage = styled.small`
 const Conversations = () => {
   return (
     <Wrapper>
-      <Title>Conversations</Title>
       <List>
+        <ListItem>
+          <ItemDetail>Karolina Obcowska</ItemDetail>
+          <LastMessage>Blablabla</LastMessage>
+        </ListItem>
+        <ListItem>
+          <ItemDetail>Karolina Obcowska</ItemDetail>
+          <LastMessage>Blablabla</LastMessage>
+        </ListItem>
+        <ListItem>
+          <ItemDetail>Karolina Obcowska</ItemDetail>
+          <LastMessage>Blablabla</LastMessage>
+        </ListItem>
         <ListItem>
           <ItemDetail>Karolina Obcowska</ItemDetail>
           <LastMessage>Blablabla</LastMessage>

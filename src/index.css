@@ -17,3 +17,7 @@ body {
 body {
   background-image: linear-gradient(to right top, #ff2e4c, #dc006b, #a9117f, #6b2684, #1e2a78);
 }
+
+.App {
+  display: flex;
+}

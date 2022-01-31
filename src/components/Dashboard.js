@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+// import Contacts from './Contacts';
 import Conversations from './Conversations';
 import NewConversation from './NewConversation';
-import Sidebar from './Sidebar';
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 const Dashboard = () => {
   return (
     <Wrapper>
-      <Sidebar />
+      {/* <Contacts /> */}
       <Conversations />
       <NewConversation />
     </Wrapper>
