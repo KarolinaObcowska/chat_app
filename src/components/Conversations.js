@@ -34,6 +34,11 @@ const ListItem = styled.li`
   border-radius: 10px;
   padding: 1rem;
   font-weight: 1;
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+  }
 `;
 
 const ItemDetail = styled.p`

@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaLocationArrow } from 'react-icons/fa';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 90vh;
   margin-top: 3rem;
   margin-left: 3rem;
