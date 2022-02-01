@@ -13,21 +13,23 @@ const Wrapper = styled.section`
 const Title = styled.h1`
   font-size: 3rem;
   color: #ffffff8e;
+  text-align: center;
+  padding: 0rem 2rem;
 `;
 const Hero = () => {
   return (
     <Wrapper>
       <div className="circles">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
       <Title>Start chatting with your friends!</Title>
     </Wrapper>

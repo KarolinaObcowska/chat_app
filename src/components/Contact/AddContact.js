@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const Wrapper = styled.div``;
-const Form = styled.form``;
-const Input = styled.input``;
-const Label = styled.input``;
-const Button = styled.button``;
-
+import Form from '../Form';
+const Wrapper = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+`;
 const AddContact = () => {
   return (
     <Wrapper>
-      <Form>
-        <Label>E-mail: </Label>
-        <Input />
-        <Button>ADD</Button>
-      </Form>
+      <Form formTitle="Provide an e-mail" labelText="E-MAIL" buttonText="Add contact" />
     </Wrapper>
   );
 };

@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import Login from './components/Login';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 

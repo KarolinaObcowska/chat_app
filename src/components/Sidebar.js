@@ -12,7 +12,7 @@ const Wrapper = styled.aside`
   position: static;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
 `;
