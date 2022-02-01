@@ -46,11 +46,11 @@ const Sidebar = () => {
         <ListItem to="/">
           <AiOutlineHome size={25} />
         </ListItem>
-        <ListItem to="/contact">
-          <IoIosContacts size={25} />
-        </ListItem>
         <ListItem to="/dashboard">
           <BiConversation size={25} />
+        </ListItem>
+        <ListItem to="/contact">
+          <IoIosContacts size={25} />
         </ListItem>
         <ListItem to="/">
           <CgLogOut size={25} />

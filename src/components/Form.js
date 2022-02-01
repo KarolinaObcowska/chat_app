@@ -57,6 +57,7 @@ const Button = styled.button`
   text-transform: uppercase;
   background: none;
   border: 1px solid white;
+  font-weight: 1;
   border-radius: 10px;
   &:hover {
     background: rgba(255, 255, 255, 0.3);
