@@ -4,6 +4,7 @@ import { CgLogOut } from 'react-icons/cg';
 import { BiConversation } from 'react-icons/bi';
 import { IoIosContacts } from 'react-icons/io';
 import { AiOutlineHome } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.aside`
   height: 100vh;
@@ -24,9 +25,10 @@ const List = styled.ul`
   color: white;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled(Link)`
   padding: 2rem 0rem;
   width: 100%;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,16 +43,16 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <List>
-        <ListItem>
+        <ListItem to="/">
           <AiOutlineHome size={25} />
         </ListItem>
-        <ListItem>
+        <ListItem to="/contact">
           <IoIosContacts size={25} />
         </ListItem>
-        <ListItem>
+        <ListItem to="/dashboard">
           <BiConversation size={25} />
         </ListItem>
-        <ListItem>
+        <ListItem to="/">
           <CgLogOut size={25} />
         </ListItem>
       </List>

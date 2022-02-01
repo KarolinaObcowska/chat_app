@@ -13,10 +13,11 @@ const FormContainer = styled.form`
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10%;
+  border-radius: 10px;
   padding: 3rem 2rem;
   justify-content: space-between;
 `;
+
 const FormGroup = styled.div`
   position: relative;
 `;
@@ -57,6 +58,9 @@ const Button = styled.button`
   background: none;
   border: 1px solid white;
   border-radius: 10px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
 `;
 
 const Form = ({ formTitle, labelText, buttonText }) => {

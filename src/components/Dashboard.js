@@ -17,11 +17,8 @@ const Wrapper = styled.div`
 const Dashboard = () => {
   return (
     <Wrapper>
-      {/* <AddContact /> */}
-      {/* <Hero /> */}
-      {/* <ContactList />
-      <Conversation /> */}
-      <Login />
+      <ContactList />
+      <Conversation />
     </Wrapper>
   );
 };
