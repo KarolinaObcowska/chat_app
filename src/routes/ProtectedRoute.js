@@ -5,7 +5,6 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 const ProtectedRoute = () => {
   const [isAuthenticated] = useLocalStorage('email');
-  console.log(isAuthenticated);
 
   return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
 };

@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -71,10 +70,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setData(emailRef.current.value);
-    navigate('/contact');
+    const d = emailRef.current.value;
+    setData(d);
+    setTimeout(() => {
+      navigate('/contact');
+    }, 1000);
   };
-
   return (
     <Wrapper>
       <Form onSubmit={handleSubmit}>

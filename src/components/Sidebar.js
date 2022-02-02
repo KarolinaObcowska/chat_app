@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { CgLogOut } from 'react-icons/cg';
 import { BiConversation } from 'react-icons/bi';
 import { IoIosContacts } from 'react-icons/io';
 import { AiOutlineHome } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Wrapper = styled.aside`
   height: 100vh;
@@ -69,7 +69,7 @@ const Sidebar = () => {
         <ListItem to="/contact" activeClassName="active">
           <IoIosContacts size={25} />
         </ListItem>
-        <ListItem to="/login">
+        <ListItem to="/">
           <CgLogOut size={25} />
         </ListItem>
       </List>
