@@ -2,12 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaLocationArrow } from 'react-icons/fa';
 
+const Container = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 const Wrapper = styled.section`
   display: flex;
   width: 500px;
   min-width: 350px;
   height: 90vh;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.2);
@@ -15,6 +23,13 @@ const Wrapper = styled.section`
   -webkit-backdrop-filter: blur(7.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    margin-top: 0;
+    border: none;
+    border-radius: 0;
+  }
 `;
 const Messages = styled.div`
   height: 100%;
@@ -23,6 +38,9 @@ const Messages = styled.div`
   padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    height: fit-content;
+  }
 `;
 
 const MessageLeft = styled.div`
@@ -83,39 +101,41 @@ const Button = styled.button`
 `;
 const Conversation = () => {
   return (
-    <Wrapper>
-      <Messages>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>
-          asdasd asdkajbck jsbdcjkbsdk jvbkjsbvkjbfkjv bfsjkbvjskfbvkjs fbkvjsfjkvbskjfbvj
-          ksbkjsbfkjvb ksjfvjfsbjkvbsf kjbvbfvasd asda sdas as dasdasd{' '}
-        </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-        <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
-        <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
-      </Messages>
-      <MessageForm>
-        <FormGroup>
-          <MessageInput />
-          <Button>
-            <FaLocationArrow size="25" />
-          </Button>
-        </FormGroup>
-      </MessageForm>
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        <Messages>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>
+            asdasd asdkajbck jsbdcjkbsdk jvbkjsbvkjbfkjv bfsjkbvjskfbvkjs fbkvjsfjkvbskjfbvj
+            ksbkjsbfkjvb ksjfvjfsbjkvbsf kjbvbfvasd asda sdas as dasdasd{' '}
+          </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+          <MessageLeft>asasda asasd asd asd asd asd asd asdasd asd da dasd</MessageLeft>
+          <MessageRight>asdasd asdasd asdasdas asdasdasd </MessageRight>
+        </Messages>
+        <MessageForm>
+          <FormGroup>
+            <MessageInput />
+            <Button>
+              <FaLocationArrow size="25" />
+            </Button>
+          </FormGroup>
+        </MessageForm>
+      </Wrapper>
+    </Container>
   );
 };
 

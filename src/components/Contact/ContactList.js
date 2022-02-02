@@ -6,6 +6,12 @@ import Image3 from '../../images/avatar3.jpg';
 import Image4 from '../../images/avatar4.jpg';
 import ContactItem from './ContactItem';
 
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
@@ -14,6 +20,7 @@ const Wrapper = styled.section`
   min-width: 300px;
   max-width: 400px;
   height: 90vh;
+  padding-bottom: 4rem;
 `;
 
 const List = styled.ul`
@@ -32,82 +39,84 @@ const List = styled.ul`
 
 const ContactList = () => {
   return (
-    <Wrapper>
-      <List>
-        <ContactItem
-          image={Image}
-          email="hello@wp.pl"
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image2}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image3}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image4}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image2}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image2}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image2}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image2}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-        <ContactItem
-          email="hello@wp.pl"
-          image={Image}
-          name="Karolina Obcowska"
-          lastMessage="Hello"
-        />
-      </List>
-    </Wrapper>
+    <Container>
+      <Wrapper>
+        <List>
+          <ContactItem
+            image={Image}
+            email="hello@wp.pl"
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image2}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image3}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image4}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image2}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image2}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image2}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image2}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+          <ContactItem
+            email="hello@wp.pl"
+            image={Image}
+            name="Karolina Obcowska"
+            lastMessage="Hello"
+          />
+        </List>
+      </Wrapper>
+    </Container>
   );
 };
 

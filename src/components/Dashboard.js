@@ -13,12 +13,17 @@ const Wrapper = styled.div`
   height: 100%;
   justify-content: center;
   gap: 5rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 `;
 const Dashboard = () => {
   return (
     <Wrapper>
-      <ContactList />
-      <Conversation />
+      {/* <ContactList /> */}
+      {/* <Conversation /> */}
     </Wrapper>
   );
 };
