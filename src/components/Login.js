@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import useLocalStorage from '../hooks/useLocalStorage';
 import PrimaryButton from './Buttons/PrimaryButton';
 
 const Wrapper = styled.section`
@@ -61,12 +64,15 @@ const Title = styled.h2`
   font-size: 2rem;
 `;
 
-const Login = ({ onEmailSubmit }) => {
+const Login = () => {
+  const [data, setData] = useLocalStorage('email');
   const emailRef = useRef();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onEmailSubmit(emailRef.current.value);
+    setData(emailRef.current.value);
+    navigate('/contact');
   };
 
   return (

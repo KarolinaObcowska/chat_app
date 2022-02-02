@@ -13,7 +13,7 @@ import Conversation from '../components/Conversation';
 const Routing = () => {
   return (
     <Routes>
-      <Route path="/main" exact element={<Hero />} />
+      <Route path="/" exact element={<Hero />} />
       <Route path="/login" exact element={<Login />} />
       <Route path="*" exact element={<Page404 />} />
       <Route element={<ProtectedRoute />}>
