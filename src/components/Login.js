@@ -1,7 +1,7 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import PrimaryButton from './Buttons/PrimaryButton';
-import useLocalStorage from '../hooks/useLocalStorage';
 
 const Wrapper = styled.section`
   height: 100vh;
@@ -61,17 +61,12 @@ const Title = styled.h2`
   font-size: 2rem;
 `;
 
-const Login = () => {
-  const [data, setData] = useLocalStorage();
-
-  const handleChange = (e) => {
-    const { value } = e.target;
-    setData(value);
-  };
-  console.log(data);
+const Login = ({ onEmailSubmit }) => {
+  const emailRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    onEmailSubmit(emailRef.current.value);
   };
 
   return (
@@ -79,7 +74,7 @@ const Login = () => {
       <Form onSubmit={handleSubmit}>
         <Title>Join Us!</Title>
         <FormGroup>
-          <Input value={data} type="email" name="email" onChange={handleChange} />
+          <Input type="email" name="email" ref={emailRef} />
           <Label htmlFor="email">E-MAIL</Label>
         </FormGroup>
         <PrimaryButton buttonType="submit" text="SIGN UP" />
