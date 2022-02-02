@@ -35,7 +35,7 @@ const Messages = styled.div`
   height: 100%;
   overflow: hidden;
   overflow-y: scroll;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {

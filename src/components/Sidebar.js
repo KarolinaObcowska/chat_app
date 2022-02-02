@@ -47,6 +47,9 @@ const ListItem = styled(Link)`
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(7.5px);
   }
+  &.active {
+    color: red;
+  }
   @media (max-width: 768px) {
     height: 100%;
     padding: 0rem;
@@ -61,7 +64,7 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <List>
-        <ListItem to="/">
+        <ListItem to="/" activeClassName="ble">
           <AiOutlineHome size={25} />
         </ListItem>
         <ListItem to="/conversation">
