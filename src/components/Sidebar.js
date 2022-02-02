@@ -1,10 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
 import { CgLogOut } from 'react-icons/cg';
 import { BiConversation } from 'react-icons/bi';
 import { IoIosContacts } from 'react-icons/io';
 import { AiOutlineHome } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Wrapper = styled.aside`
   height: 100vh;
@@ -32,11 +33,12 @@ const List = styled.ul`
   color: white;
   @media (max-width: 768px) {
     display: flex;
+    height: 100%;
     flex-direction: row;
   }
 `;
 
-const ListItem = styled(Link)`
+const ListItem = styled(NavLink)`
   padding: 2rem 0rem;
   width: 100%;
   color: white;
@@ -47,16 +49,10 @@ const ListItem = styled(Link)`
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(7.5px);
   }
-  &.active {
-    color: red;
-  }
   @media (max-width: 768px) {
     height: 100%;
     padding: 0rem;
-    &:hover {
-      background: none;
-      backdrop-filter: none;
-    }
+    justify-content: center;
   }
 `;
 
@@ -64,16 +60,16 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <List>
-        <ListItem to="/" activeClassName="ble">
+        <ListItem to="/" activeClassName="active">
           <AiOutlineHome size={25} />
         </ListItem>
-        <ListItem to="/conversation">
+        <ListItem to="/conversation" activeClassName="active">
           <BiConversation size={25} />
         </ListItem>
-        <ListItem to="/contact">
+        <ListItem to="/contact" activeClassName="active">
           <IoIosContacts size={25} />
         </ListItem>
-        <ListItem to="/">
+        <ListItem to="/login">
           <CgLogOut size={25} />
         </ListItem>
       </List>
