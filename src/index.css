@@ -25,6 +25,15 @@ body {
   display: flex;
 }
 
+.hidden {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .circles {
   position: absolute;
   top: 0;

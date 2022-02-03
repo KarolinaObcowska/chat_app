@@ -6,7 +6,6 @@ import Image2 from '../../images/avatar2.png';
 import Image3 from '../../images/avatar3.jpg';
 import Image4 from '../../images/avatar4.jpg';
 import ContactItem from './ContactItem';
-import AddContact from './AddContact';
 
 const Container = styled.div`
   display: flex;
@@ -138,7 +137,6 @@ const ContactList = () => {
           />
         </List>
       </Wrapper>
-      <AddContact />
     </Container>
   );
 };

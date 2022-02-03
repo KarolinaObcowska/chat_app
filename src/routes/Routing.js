@@ -10,6 +10,7 @@ import Login from '../components/Login';
 import ContactList from '../components/Contact/ContactList';
 import Conversation from '../components/Conversation';
 import Dashboard from '../components/Dashboard';
+import AddContact from '../components/Contact/AddContact';
 
 const Routing = () => {
   return (
@@ -21,6 +22,7 @@ const Routing = () => {
         <Route path="/contact" exact element={<ContactList />} />
         <Route path="/conversation" exact element={<Conversation />} />
         <Route path="/dashboard" exact element={<Dashboard />} />
+        <Route path="/contact/add" exact element={<AddContact />} />
       </Route>
     </Routes>
   );

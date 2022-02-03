@@ -8,9 +8,6 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 const AddContact = () => {
   return (
