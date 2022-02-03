@@ -5,7 +5,7 @@ import { CgLogOut } from 'react-icons/cg';
 import { BiConversation } from 'react-icons/bi';
 import { IoIosContacts } from 'react-icons/io';
 import { AiOutlineHome } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { FaWpbeginner } from 'react-icons/fa';
 
@@ -60,28 +60,31 @@ const ListItem = styled(NavLink)`
 
 const Sidebar = () => {
   const [data, setData] = useLocalStorage('email');
+
   const logout = () => {
     localStorage.removeItem('chating-app-email');
     setData(null);
   };
 
   return (
-    <Wrapper>
-      <List>
-        <ListItem to="/dashboard" activeClassName="active">
-          <AiOutlineHome size={25} />
-        </ListItem>
-        <ListItem to="/conversation" activeClassName="active">
-          <BiConversation size={25} />
-        </ListItem>
-        <ListItem to="/contact" activeClassName="active">
-          <IoIosContacts size={25} />
-        </ListItem>
-        <ListItem to="/" onClick={logout}>
-          <CgLogOut size={25} />
-        </ListItem>
-      </List>
-    </Wrapper>
+    data && (
+      <Wrapper>
+        <List>
+          <ListItem to="/dashboard" activeClassName="active">
+            <AiOutlineHome size={25} />
+          </ListItem>
+          <ListItem to="/conversation" activeClassName="active">
+            <BiConversation size={25} />
+          </ListItem>
+          <ListItem to="/contact" activeClassName="active">
+            <IoIosContacts size={25} />
+          </ListItem>
+          <ListItem to="/" onClick={logout}>
+            <CgLogOut size={25} />
+          </ListItem>
+        </List>
+      </Wrapper>
+    )
   );
 };
 

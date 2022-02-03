@@ -72,7 +72,7 @@ const Login = () => {
     e.preventDefault();
     setData(emailRef.current.value);
     setTimeout(() => {
-      navigate('/contact');
+      navigate('/dashboard');
     }, 1000);
   };
   return (
