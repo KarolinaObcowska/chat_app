@@ -13,11 +13,10 @@ function useLocalStorage(key, initialValue) {
       return initialValue;
     }
   });
-  console.log(value);
 
   useEffect(() => {
     localStorage.setItem(prefixedKey, JSON.stringify(value));
-  }, [prefixedKey, value]);
+  }, [value]);
 
   return [value, setValue];
 }

@@ -15,12 +15,15 @@ const Container = styled.div`
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 2rem;
   align-items: center;
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 350px;
+  margin-top: 1rem;
   height: 90vh;
-  padding-bottom: 4rem;
+  max-width: 400px;
+  @media (max-width: 768px) {
+    width: 90%;
+    padding-bottom: 2rem;
+  }
 `;
 
 const List = styled.ul`

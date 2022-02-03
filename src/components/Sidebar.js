@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { CgLogOut } from 'react-icons/cg';
 import { BiConversation } from 'react-icons/bi';
 import { IoIosContacts } from 'react-icons/io';
 import { AiOutlineHome } from 'react-icons/ai';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import useLocalStorage from '../hooks/useLocalStorage';
+import { FaWpbeginner } from 'react-icons/fa';
 
 const Wrapper = styled.aside`
   height: 100vh;
@@ -57,10 +59,16 @@ const ListItem = styled(NavLink)`
 `;
 
 const Sidebar = () => {
+  const [data, setData] = useLocalStorage('email');
+  const logout = () => {
+    localStorage.removeItem('chating-app-email');
+    setData(null);
+  };
+
   return (
     <Wrapper>
       <List>
-        <ListItem to="/" activeClassName="active">
+        <ListItem to="/dashboard" activeClassName="active">
           <AiOutlineHome size={25} />
         </ListItem>
         <ListItem to="/conversation" activeClassName="active">
@@ -69,7 +77,7 @@ const Sidebar = () => {
         <ListItem to="/contact" activeClassName="active">
           <IoIosContacts size={25} />
         </ListItem>
-        <ListItem to="/">
+        <ListItem to="/" onClick={logout}>
           <CgLogOut size={25} />
         </ListItem>
       </List>

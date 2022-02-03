@@ -68,10 +68,9 @@ const Login = () => {
   const emailRef = useRef();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const d = emailRef.current.value;
-    setData(d);
+    setData(emailRef.current.value);
     setTimeout(() => {
       navigate('/contact');
     }, 1000);
