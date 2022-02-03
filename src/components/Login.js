@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import Dashboard from './Dashboard';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import useLocalStorage from '../hooks/useLocalStorage';
@@ -65,15 +66,15 @@ export const Title = styled.h2`
 
 const Login = () => {
   const [data, setData] = useLocalStorage('email');
+
   const emailRef = useRef();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setData(emailRef.current.value);
-    setTimeout(() => {
-      navigate('/dashboard');
-    }, 1000);
+    await setData(emailRef.current.value);
+    navigate('/dashboard');
+    window.location.reload();
   };
   return (
     <Wrapper>
