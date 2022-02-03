@@ -12,7 +12,7 @@ const Wrapper = styled.section`
   align-items: center;
   justify-content: center;
 `;
-const Form = styled.form`
+export const Form = styled.form`
   display: flex;
   z-index: 10;
   flex-direction: column;
@@ -30,10 +30,10 @@ const Form = styled.form`
   }
 `;
 
-const FormGroup = styled.div`
+export const FormGroup = styled.div`
   position: relative;
 `;
-const Input = styled.input`
+export const Input = styled.input`
   margin: 1rem 0rem;
   padding: 1rem;
   width: 100%;
@@ -45,7 +45,7 @@ const Input = styled.input`
     outline: none;
   }
 `;
-const Label = styled.label`
+export const Label = styled.label`
   opacity: 0.6;
   position: absolute;
   top: 35px;
@@ -58,7 +58,7 @@ const Label = styled.label`
     opacity: 1;
   }
 `;
-const Title = styled.h2`
+export const Title = styled.h2`
   text-align: center;
   font-size: 2rem;
 `;

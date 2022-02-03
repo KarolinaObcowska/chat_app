@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Image from '../../images/avatar.jpg';
 import Image2 from '../../images/avatar2.png';
 import Image3 from '../../images/avatar3.jpg';
 import Image4 from '../../images/avatar4.jpg';
 import ContactItem from './ContactItem';
+import AddContact from './AddContact';
 
 const Container = styled.div`
   display: flex;
   width: 100%;
+  padding: 0rem 2rem;
   align-items: center;
   justify-content: center;
 `;
@@ -18,6 +21,7 @@ const Wrapper = styled.section`
   align-items: center;
   min-width: 350px;
   margin-top: 1rem;
+  border-top: 0.5px solid white;
   height: 90vh;
   max-width: 400px;
   @media (max-width: 768px) {
@@ -36,14 +40,29 @@ const List = styled.ul`
   align-items: center;
   overflow: hidden;
   overflow-y: scroll;
-  border-bottom: 0.5px solid white;
   border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
 `;
 
+const AddContactLink = styled(Link)`
+  text-decoration: none;
+  color: #ffffffce;
+  text-transform: uppercase;
+  border: 1px solid #ffffffae;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+`;
 const ContactList = () => {
   return (
     <Container>
       <Wrapper>
+        <AddContactLink to="/contact/add">Add new contact</AddContactLink>
         <List>
           <ContactItem
             image={Image}
@@ -119,6 +138,7 @@ const ContactList = () => {
           />
         </List>
       </Wrapper>
+      <AddContact />
     </Container>
   );
 };

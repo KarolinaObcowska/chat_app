@@ -9,21 +9,33 @@ import Login from './Login';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
   justify-content: center;
-  gap: 5rem;
+  align-items: center;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     gap: 0;
   }
 `;
+
+const Description = styled.p`
+  color: white;
+  margin-top: 1rem;
+`;
+
+const Title = styled.h1`
+  color: white;
+`;
+
 const Dashboard = () => {
+  const userName = localStorage.getItem('chating-app-email');
+  const formattedUserName = userName.substring(1, userName.length - 1);
   return (
     <Wrapper>
-      {/* <ContactList /> */}
-      {/* <Conversation /> */}
+      <Title>Hello {formattedUserName}!</Title>
+      <Description>Now you can start chating with your friends!</Description>
     </Wrapper>
   );
 };
