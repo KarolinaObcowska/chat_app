@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   color: white;
+  coursor: pointer;
   margin-top: 2rem;
   padding: 1rem 0rem;
   text-transform: uppercase;
@@ -22,8 +23,12 @@ const Button = styled.button`
   }
 `;
 
-const PrimaryButton = ({ text, buttonType }) => {
-  return <Button type={buttonType}>{text}</Button>;
+const PrimaryButton = ({ text, buttonType, callback, className }) => {
+  return (
+    <Button type={buttonType} className={className} onClick={callback}>
+      {text}
+    </Button>
+  );
 };
 
 export default PrimaryButton;

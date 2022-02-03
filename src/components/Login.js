@@ -20,8 +20,6 @@ export const Form = styled.form`
   color: white;
   width: 450px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   padding: 3rem 2rem;
