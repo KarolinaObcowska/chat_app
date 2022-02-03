@@ -15,10 +15,10 @@ const Wrapper = styled.section`
 `;
 export const Form = styled.form`
   display: flex;
-  z-index: 10;
   flex-direction: column;
   color: white;
   width: 450px;
+  z-index: 10;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;

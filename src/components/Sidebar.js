@@ -25,6 +25,9 @@ const Wrapper = styled.aside`
     bottom: 0;
     z-index: 100;
   }
+  @media (min-width: 1200px) {
+    width: 8rem;
+  }
 `;
 
 const List = styled.ul`
